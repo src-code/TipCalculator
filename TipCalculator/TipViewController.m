@@ -19,10 +19,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"Tip Calculator";
+    self.title = @"TipperMore";
+    
+    // Set the default tip amount
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    long tipDefault = [defaults integerForKey:@"tipPercent"];
+    self.tipControl.selectedSegmentIndex = tipDefault;
+    
+    [self updateTipPercent];
     [self updateValues];
 }
-
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -38,6 +44,12 @@
     [self updateValues];
 }
 
+- (void)updateTipPercent {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    long tipDefault = [defaults integerForKey:@"tipPercent"];
+    self.tipControl.selectedSegmentIndex = tipDefault;
+}
+
 - (void)updateValues {
     float BillAmount = [self.billTextField.text floatValue];
     
@@ -49,6 +61,27 @@
     // Update the UI
     self.tipLabel.text = [NSString stringWithFormat:@"$%0.2f", TipAmount];
     self.totalLabel.text = [NSString stringWithFormat:@"$%0.2f", TotalAmount];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    NSLog(@"view will appear");
+    [self updateTipPercent];
+    [self updateValues];
+    
+    // Focus on bill amount
+    [self.billTextField becomeFirstResponder];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    NSLog(@"view did appear");
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    NSLog(@"view will disappear");
+}
+
+- (void)viewDidDisappear:(BOOL)animated {
+    NSLog(@"view did disappear");
 }
 
 @end

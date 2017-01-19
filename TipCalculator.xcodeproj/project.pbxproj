@@ -13,6 +13,7 @@
 		B222E32A1E2EE28000CA0FB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B222E3281E2EE28000CA0FB2 /* Main.storyboard */; };
 		B222E32C1E2EE28000CA0FB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B222E32B1E2EE28000CA0FB2 /* Assets.xcassets */; };
 		B222E32F1E2EE28000CA0FB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B222E32D1E2EE28000CA0FB2 /* LaunchScreen.storyboard */; };
+		B222E3381E30080300CA0FB2 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B222E3371E30080300CA0FB2 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		B222E32B1E2EE28000CA0FB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B222E32E1E2EE28000CA0FB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B222E3301E2EE28000CA0FB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B222E3361E30080300CA0FB2 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		B222E3371E30080300CA0FB2 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,8 @@
 				B222E3251E2EE28000CA0FB2 /* TipViewController.h */,
 				B222E3261E2EE28000CA0FB2 /* TipViewController.m */,
 				B222E3281E2EE28000CA0FB2 /* Main.storyboard */,
+				B222E3361E30080300CA0FB2 /* SettingsViewController.h */,
+				B222E3371E30080300CA0FB2 /* SettingsViewController.m */,
 				B222E32B1E2EE28000CA0FB2 /* Assets.xcassets */,
 				B222E32D1E2EE28000CA0FB2 /* LaunchScreen.storyboard */,
 				B222E3301E2EE28000CA0FB2 /* Info.plist */,
@@ -153,6 +158,7 @@
 				B222E3271E2EE28000CA0FB2 /* TipViewController.m in Sources */,
 				B222E3241E2EE28000CA0FB2 /* AppDelegate.m in Sources */,
 				B222E3211E2EE28000CA0FB2 /* main.m in Sources */,
+				B222E3381E30080300CA0FB2 /* SettingsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,7 +280,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yahoo.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yahoo.TipperMore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -285,7 +291,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yahoo.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yahoo.TipperMore;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

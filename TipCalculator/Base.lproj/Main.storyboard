@@ -32,7 +32,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w0C-MO-036">
-                                <rect key="frame" x="16" y="275" width="38" height="21"/>
+                                <rect key="frame" x="16" y="235" width="38" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -46,24 +46,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ule-IG-pb1">
-                                <rect key="frame" x="151" y="275" width="152" height="21"/>
+                                <rect key="frame" x="152" y="234" width="152" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="dTr-Na-G4J">
-                                <rect key="frame" x="75" y="347" width="171" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <segments>
-                                    <segment title="15%"/>
-                                    <segment title="20%"/>
-                                    <segment title="25%"/>
-                                </segments>
-                                <connections>
-                                    <action selector="onValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="QX1-vl-Eq8"/>
-                                </connections>
-                            </segmentedControl>
                             <view contentMode="scaleToFill" misplaced="YES" id="v1l-mZ-DG7">
                                 <rect key="frame" x="16" y="190" width="288" height="11"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -76,6 +64,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="dTr-Na-G4J">
+                                <rect key="frame" x="75" y="270" width="171" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="QX1-vl-Eq8"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -83,7 +83,13 @@
                             <outletCollection property="gestureRecognizers" destination="rcr-1l-Haw" appends="YES" id="2Za-4B-wmJ"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="lhz-w4-4sc"/>
+                    <navigationItem key="navigationItem" id="lhz-w4-4sc">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="Hi6-Tc-Fm1">
+                            <connections>
+                                <segue destination="Xbo-Ig-pR0" kind="push" id="rra-e6-d7k"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="BillTextField" destination="gQh-AI-bBE" id="nic-eJ-AaK"/>
                         <outlet property="billTextField" destination="gQh-AI-bBE" id="yjg-JU-9VM"/>
@@ -99,7 +105,47 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="660" y="137"/>
+            <point key="canvasLocation" x="693" y="137"/>
+        </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="Ld7-fL-eUe">
+            <objects>
+                <viewController id="Xbo-Ig-pR0" customClass="SettingsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OXH-Ct-vod">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Default Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BEf-tL-1ZT">
+                                <rect key="frame" x="16" y="95" width="84" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="7F3-0o-FHL">
+                                <rect key="frame" x="133" y="92" width="171" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="15%"/>
+                                    <segment title="20%"/>
+                                    <segment title="25%"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onTipChanged:" destination="Xbo-Ig-pR0" eventType="valueChanged" id="AX7-HR-Jb5"/>
+                                    <action selector="onValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z9n-PG-Vn9"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ff0-A6-fwF"/>
+                    <connections>
+                        <outlet property="tipControl" destination="7F3-0o-FHL" id="3FT-hd-Uja"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Scm-jI-cB9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1075" y="137"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HWY-au-kp7">
@@ -118,6 +164,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b7E-0h-ib3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="73.5" y="137.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="wJf-Zi-QXR">
+            <objects>
+                <viewController id="b8n-ND-jUS" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Ba-a0-PBm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w8Y-ob-FPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="73" y="-567"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
