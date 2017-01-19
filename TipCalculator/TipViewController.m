@@ -40,7 +40,11 @@
     [self updateValues];
 }
 
-- (IBAction)onValueChange:(UISegmentedControl *)sender {
+- (IBAction)onTipAmountChange:(UISegmentedControl *)sender {
+    [self updateValues];
+}
+
+- (IBAction)onBillAmountChange:(UITextField *)sender {
     [self updateValues];
 }
 
